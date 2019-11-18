@@ -33,7 +33,7 @@
         //Extra if we need
         ?>        
         <meta charset="UTF-8">
-        <meta name="author" content="Zachary Rossi">
+        <meta name="author" content="Zachary Rossi, Tyler Eisenmenger, Josh Deland">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="css/custon.css?version=1.0" type="text/css">
     </head>
