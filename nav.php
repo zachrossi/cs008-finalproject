@@ -27,8 +27,7 @@
             print '">';
             print '<a href="products.php">Shop Planets</a>';
             print '</li>';
-            
-          
+      
             //About
             print '<li class="';
             if ($path_parts['filename'] == "about") {
