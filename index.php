@@ -43,3 +43,4 @@ include ("nav.php");
     include ("footer.php");
     ?>
 </main>
+</html>
