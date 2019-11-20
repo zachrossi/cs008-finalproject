@@ -27,15 +27,6 @@
             print '">';
             print '<a href="products.php">Shop Planets</a>';
             print '</li>';
-      
-            //About
-            print '<li class="';
-            if ($path_parts['filename'] == "about") {
-                print 'activePage';
-            }
-            print '">';
-            print '<a href="about_us.php">About</a>';
-            print '</li>';
             
             //Contest
             print '<li class="';
@@ -45,6 +36,18 @@
             print '">';
             print '<a href="contest.php">Contest</a>';
             print '</li>';
+            
+            
+            //About
+            print '<li class="';
+            if ($path_parts['filename'] == "about") {
+                print 'activePage';
+            }
+            print '">';
+            print '<a href="about_us.php">About</a>';
+            print '</li>';
             ?>
+            
+            
         </ul>
     </nav>
