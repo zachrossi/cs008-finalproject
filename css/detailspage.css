@@ -12,14 +12,25 @@ main {
 main figure.planetImages {
     grid-column: 1 / 2;
     grid-row: 1 / 6;
+    max-width: 100%;
+}    
+main figure.planetImages img {
+    max-width: 100%;
 }
 main h1.planetName {
     grid-column: 2 / 3;
     grid-row: 1 / 2;
 }
-main h3.rating {
+main h3.ratings {
     grid-column: 2 / 3;
     grid-row: 2 / 3;
+}
+main h3.ratingStars, h3.reviewCount {
+    display: inline;
+}
+main h3.ratingStars {
+    margin-right: 1em;
+    color: gold;
 }
 main h2.price {
     grid-column: 2 / 3;
@@ -27,8 +38,17 @@ main h2.price {
 }
 main  article {
     grid-column: 2 / 3;
-    grid-row: 4 / 7;
+    grid-row: 4 / 6;
 }
+main h2.purchaseButton {
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
+}
+main section.reviewForm {
+    grid-column: 1 / 4;
+    grid-row: 6 / 7;
+}
+
 main h2.purchaseButton {
     grid-column: 3 / 4;
     grid-row: 1 / 2;
