@@ -151,7 +151,24 @@ function verifyAlphaNum($testString) {
                     <li>Feature</li>
                 </ul>
             </article>
-
+            <article>
+                <h3>Reviews</h3>
+                <?php
+                //Will change to to WHERE fldPlanet = 'insert planet here' to use reviews only from that planet
+                $sql = 'SELECT fldName, fldRating, fldTitle, fldReview, fldPlanet FROM tblReviews';
+                $statement = $pdo->prepare($sql);
+                $statement->execute();
+                $rows = $statement->fetchAll();
+                
+                foreach ($rows as $row){
+                    print '';
+                    print '<p class=\'review_rating\'>' . $row['fldRating'] . '</p>';
+                    print '<p class=\'review_name\'>' . $row['fldName'] . '</p>';
+                    print '<p class=\'review_title\'>' . $row['fldTitle'] . '</p>';
+                    print '<p class=\'review_review\'>' . $row['fldReview'] . '</p>';
+                }
+                ?>
+            </article>
             <section class="reviewForm">
                 <h2>Write A Review</h2>
                 <form action="<?php print $phpself; ?>"
