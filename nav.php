@@ -16,16 +16,7 @@
                 print 'activePage';
             }
             print '">';
-            print '<a href="form.php">Todays Deals</a>';
-            print '</li>';
-
-            //About
-            print '<li class="';
-            if ($path_parts['filename'] == "about") {
-                print 'activePage';
-            }
-            print '">';
-            print '<a href="about_us.php">About</a>';
+            print '<a href="form.php">Today\'s Deals</a>';
             print '</li>';
 
             //Products
@@ -34,7 +25,7 @@
                 print 'activePage';
             }
             print '">';
-            print '<a href="contact.php">Contact</a>';
+            print '<a href="products.php">Shop Planets</a>';
             print '</li>';
             
             //Contest
@@ -45,6 +36,18 @@
             print '">';
             print '<a href="contest.php">Contest</a>';
             print '</li>';
+            
+            
+            //About
+            print '<li class="';
+            if ($path_parts['filename'] == "about") {
+                print 'activePage';
+            }
+            print '">';
+            print '<a href="about_us.php">About</a>';
+            print '</li>';
             ?>
+            
+            
         </ul>
     </nav>
