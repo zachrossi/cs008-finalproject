@@ -46,8 +46,9 @@ $pdo = new PDO($dsn, $dbUserName, $dbPassword);
     //Extra if we need
     //review
     if ($path_parts['filename'] == "review") {
-      print 'PlanetBay -  Review | Zachary Rossi, Tyler Eisenmenger, Josh Deland</title> ';
+      print '<title> PlanetBay -  Review | Zachary Rossi, Tyler Eisenmenger, Josh Deland</title> ';
       print '<meta name="description" content="This includes the page to review a planet">';
+    }
     ?>
     <meta charset="UTF-8">
     <meta name="author" content="Zachary Rossi, Tyler Eisenmenger, Josh Deland">
