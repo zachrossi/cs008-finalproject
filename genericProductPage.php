@@ -1,57 +1,201 @@
 <?php
-    include "top.php";
-    include "nav.php";
+include "top.php";
+include "nav.php";
+print '<p>Post Array:</p><pre>';
+print_r($_POST);
+print '</pre>';
+
+$dataIsGood = false;
+
+//
+// Sanatize the data
+//
+function getData($field) {
+    if (!isset($_POST[$field])) {
+        $data = "";
+    } else {
+        $data = trim($_POST[$field]);
+        $data = htmlspecialchars($data);
+    }
+    return $data;
+}
+
+function verifyAlphaNum($testString) {
+    return (preg_match("/^([[:alnum:]]|-|\.| |\'|&|;|#)+$/", $testString));
+}
 ?>
-    <link rel="stylesheet" href="css/detailspage.css?version=1.0" type="text/css">
 <main>
-
-    <h1 class = "planetName">Planet Name</h1>
-
-    <section class="ratings">
-    <h3 class = "ratingStars">☆☆☆☆☆</h3>
-    <h3 class = "reviewCount">45 Reviews</h3>
-    </section>
-
-    <h2 class = "price">$1,240,000</h2>
-
-    <h2 class = "purchaseButton"><a href="paymentinfo.php">Purchase Planet</a></h2>
-
-    <figure class = "planetImages">
-        <img src="finalProjectImages/genericplanet.jpg" alt="This should show the main planet image">
-        <!-- Under the main image will be all the images in a row, smaller than the main image -->
-    </figure>
-
+    <h1>PlanetBay</h1>
     <article>
-    <p class = "description">This is where the planet will be described in great detail.
-    We can also add a list of the main features if we want, and maybe some other info. (Example description)
-    Planet X exudes an overwhelming feeling of life and vibrance. One of its most unique features
-    is the diversity of color as seen from space. Hues of yellow, purple, blue, and green pierce through
-    the atmosphere and into our blessed eyes. On the surface you will find deep valleys and tall peaks which
-    are complimented by a large lagoon in the eastern hemisphere and an expansive desert in the west. Underground
-    is a big cave with more caves in the first cave! Please buy this planet the price is very, very low!</p>
+        <?php
+        // process form when it is submitted
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            // we only save the data if it is good so we need to make a flag
+            // notice if the data fails a check i set this flag to false
+            $dataIsGood = true;
 
-    <h3>Features of Planet X</h3>
-    <ul class = "featureList">
-        <li>3.5 million sq. ft. of desert with fine sand</li>
-        <li>Main lagoon contains 12,895 million gallons of saltwater </li>
-        <li>Tallest peak - 45.3 km above sea level</li>
-        <li>Feature</li>
-        <li>Feature</li>
-        <li>Feature</li>
-    </ul>
-    </article>
-
-    <section class="reviewForm">
-        <h2>Write A Review</h2>
-        <form action="<?php print $phpself; ?>"
-              id = "frmReview"
-              method="POST">
+            // Server side Sanatize values
+            $name = getData("txtName");
+            $rating = getData("selRating");
+            $reviewHeadline = getData("txtReviewHeadline");
+            $review = getData("txtReview");
+            $planet = getData("selPlanet");
+            $email = getData("txtEmail");
+            $email = filter_var($email, FILTER_SANITIZE_EMAIL);
+            //MAKE A BUNCH OF IF STATEMENTS
+            // Server side Validation
 
 
-        </form>
+            if ($name == "") {
+                print '<p class="mistake">Please enter your name.</p>';
+                $dataIsGood = false;
+            }
+            if (verifyAlphaNum($name) == 0) {
+                print '<p class="mistake">Please enter a valid name.</p>';
+                $dataIsGood = false;
+            }
+            if ($reviewHeadline == "") {
+                print '<p class="mistake">Please enter your review headline.</p>';
+                $dataIsGood = false;
+            }
+            if ($review == "") {
+                print '<p class="mistake">Please enter your review.</p>';
+                $dataIsGood = false;
+            }
+            if ($rating > 5 or $rating < 1) {
+                print '<p class="mistake">Please choose a proper rating value.</p>';
+                $dataIsGood = false;
+            }
+            if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+                // filter var returns true if it is valid, the ! says if it is not good
+                print '<p class="mistake">Your email address appears to be incorrect.</p>';
+                $dataIsGood = false;
+            }
+            if ($email == "") {
+                print '<p class="mistake">Please enter your email address.</p>';
+                $dataIsGood = false;
+            }
 
-    </section>
+            if ($dataIsGood) {
+                // save the data
+                try {
+                    // Try to insert the submitted values using a prepared statement
+                    $sql = 'INSERT INTO tblReviews (fldName, fldRating, fldTitle, fldReview, fldPlanet) VALUES (?,?,?,?,?)';
+                    $statement = $pdo->prepare($sql);
+                    $params = [$name, $rating, $reviewHeadline, $review, $planet];
+                    $statement->execute($params);
+                    print '<p>record was successfully inserted.</p>';
+                } catch (PDOException $e) {
+                    print '<p>Couldn\'t insert the record please contact someone :) and ignore the email.</p>';
+                } //end try
+            } // ends data is good
+        } // ends form was submitted
+        // if the data is good we will email the person and display a message, 
+        // otherwise we display the form
+        if ($dataIsGood) {
+            $to = $email;
+            $from = 'PlanetBay Team <zrossi@uvm.edu>';
+            $subject = 'PlanetBay Review Completion';
+            $mailMessage = '<p style="font: 14pt serif;">Very cool of you to review a planet.</p><p>Very cool<br><span style="color: blue; padding-left: 5em;">PlanetBays</span></p>';
+            $headers = "MIME-Version: 1.0\r\n";
+            $headers .= "Content-type: text/html; charset=utf-8\r\n";
+            $headers .= "From: " . $from . "\r\n";
 
-</main>
 
-<?php include "footer.php" ?>
+            $mailedSent = mail($to, $subject, $mailMessage, $headers);
+
+            if ($mailedSent) {
+                print "<p>Mail send successfully</p>";
+            }
+
+            print '<h2>Thank you, your information has been received.</h2>';
+
+            die(); // just stop at this point we dont want to display the form
+        }
+        ?>
+        <link rel="stylesheet" href="css/detailspage.css?version=1.0" type="text/css">
+        <main>
+
+            <h1 class = "planetName">Planet Name</h1>
+
+            <section class="ratings">
+                <h3 class = "ratingStars">☆☆☆☆☆</h3>
+                <h3 class = "reviewCount">45 Reviews</h3>
+            </section>
+
+            <h2 class = "price">$1,240,000</h2>
+
+            <h2 class = "purchaseButton"><a href="paymentinfo.php">Purchase Planet</a></h2>
+
+            <figure class = "planetImages">
+                <img src="finalProjectImages/genericplanet.jpg" alt="This should show the main planet image">
+                <!-- Under the main image will be all the images in a row, smaller than the main image -->
+            </figure>
+
+            <article>
+                <p class = "description">This is where the planet will be described in great detail.
+                    We can also add a list of the main features if we want, and maybe some other info. (Example description)
+                    Planet X exudes an overwhelming feeling of life and vibrance. One of its most unique features
+                    is the diversity of color as seen from space. Hues of yellow, purple, blue, and green pierce through
+                    the atmosphere and into our blessed eyes. On the surface you will find deep valleys and tall peaks which
+                    are complimented by a large lagoon in the eastern hemisphere and an expansive desert in the west. Underground
+                    is a big cave with more caves in the first cave! Please buy this planet the price is very, very low!</p>
+
+                <h3>Features of Planet X</h3>
+                <ul class = "featureList">
+                    <li>3.5 million sq. ft. of desert with fine sand</li>
+                    <li>Main lagoon contains 12,895 million gallons of saltwater </li>
+                    <li>Tallest peak - 45.3 km above sea level</li>
+                    <li>Feature</li>
+                    <li>Feature</li>
+                    <li>Feature</li>
+                </ul>
+            </article>
+
+            <section class="reviewForm">
+                <h2>Write A Review</h2>
+                <form action="<?php print $phpself; ?>"
+                      id = "frmReview"
+                      method="POST">
+                    <fieldset>
+                        <legend>Enter your Name and Email</legend>
+                        <p><label for="txtName">Name:</label>
+                            <input name="txtName" id="txtName" type="text" required></p>
+                        <p><label for="txtEmail">Email:</label>
+                            <input name="txtEmail" id="txtEmail" type="text" required></p>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Enter your review</legend>
+                        <p><label for="txtReviewHeadline">Review Title:</label>
+                            <input name="txtReviewHeadline" id="txtReviewHeadline" type="text" required></p>
+                        <p><label for="txtReview">Review:</label>
+                            <textarea name="txtReview" id="txtReview" rows="7" cols="50"></textarea></p>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Select your rating</legend>
+                        <select name="selRating" id="selRating" required>
+                            <option value='1'>1</option>
+                            <option value='2'>2</option>
+                            <option value='3'>3</option>
+                            <option value='4'>4</option>
+                            <option value='5'>5</option>
+                        </select>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Select the planet the review is for</legend>
+                        <select name="selPlanet" id="selPlanet" required>
+                            <option value='planet1'>planet1</option>
+                            <option value='planet2'>planet2</option>
+                            <option value='planet3'>planet3</option>
+                            <option value='planet4'>planet4</option>
+                            <option value='planet5'>planet5</option>
+                        </select>
+                    </fieldset>  
+                    <input name="btnSubmit" type="submit" value="submit">
+                </form>
+            </section>
+        </main>
+        <?php include "footer.php" ?>
+    </body>
+</html>
+    
