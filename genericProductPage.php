@@ -4,9 +4,7 @@ include "nav.php";
 print '<p>Post Array:</p><pre>';
 print_r($_POST);
 print '</pre>';
-
 $dataIsGood = false;
-
 //
 // Sanatize the data
 //
@@ -19,7 +17,6 @@ function getData($field) {
     }
     return $data;
 }
-
 function verifyAlphaNum($testString) {
     return (preg_match("/^([[:alnum:]]|-|\.| |\'|&|;|#)+$/", $testString));
 }
@@ -33,7 +30,6 @@ function verifyAlphaNum($testString) {
             // we only save the data if it is good so we need to make a flag
             // notice if the data fails a check i set this flag to false
             $dataIsGood = true;
-
             // Server side Sanatize values
             $name = getData("txtName");
             $rating = getData("selRating");
@@ -44,8 +40,6 @@ function verifyAlphaNum($testString) {
             $email = filter_var($email, FILTER_SANITIZE_EMAIL);
             //MAKE A BUNCH OF IF STATEMENTS
             // Server side Validation
-
-
             if ($name == "") {
                 print '<p class="mistake">Please enter your name.</p>';
                 $dataIsGood = false;
@@ -75,22 +69,21 @@ function verifyAlphaNum($testString) {
                 print '<p class="mistake">Please enter your email address.</p>';
                 $dataIsGood = false;
             }
-
             if ($dataIsGood) {
                 // save the data
                 try {
                     // Try to insert the submitted values using a prepared statement
-                    $sql = 'INSERT INTO tblReviews (fldName, fldRating, fldTitle, fldReview, fldPlanet) VALUES (?,?,?,?,?)';
+                    $sql = 'INSERT INTO tblReviews (fldName, fldEmail, fldPlanet, fldRating, fldTitle, fldReview) VALUES (?,?,?,?,?,?)';
                     $statement = $pdo->prepare($sql);
-                    $params = [$name, $rating, $reviewHeadline, $review, $planet];
+                    $params = [$name, $email, $planet, $rating, $reviewHeadline, $review];
                     $statement->execute($params);
-                    print '<p>record was successfully inserted.</p>';
+                    print '<p>Your review was successfully submitted!</p>';
                 } catch (PDOException $e) {
-                    print '<p>Couldn\'t insert the record please contact someone :) and ignore the email.</p>';
+                    print '<p>Sorry! Your review was unable to be submitted!</p>';
                 } //end try
             } // ends data is good
         } // ends form was submitted
-        // if the data is good we will email the person and display a message, 
+        // if the data is good we will email the person and display a message,
         // otherwise we display the form
         if ($dataIsGood) {
             $to = $email;
@@ -100,21 +93,16 @@ function verifyAlphaNum($testString) {
             $headers = "MIME-Version: 1.0\r\n";
             $headers .= "Content-type: text/html; charset=utf-8\r\n";
             $headers .= "From: " . $from . "\r\n";
-
-
             $mailedSent = mail($to, $subject, $mailMessage, $headers);
-
             if ($mailedSent) {
-                print "<p>Mail send successfully</p>";
+                print "<p>A thank you message was sent to your email.</p>";
             }
-
-            print '<h2>Thank you, your information has been received.</h2>';
-
+            print '<h2>Thank you, your review has been received.</h2>';
             die(); // just stop at this point we dont want to display the form
         }
         ?>
         <link rel="stylesheet" href="css/detailspage.css?version=1.0" type="text/css">
-        <main>
+
 
             <h1 class = "planetName">Planet Name</h1>
 
@@ -151,27 +139,12 @@ function verifyAlphaNum($testString) {
                     <li>Feature</li>
                 </ul>
             </article>
-            <article>
+            <section class="displayReview">
                 <h3>Reviews</h3>
-                <?php
-                //Will change to to WHERE fldPlanet = 'insert planet here' to use reviews only from that planet
-                $sql = 'SELECT fldName, fldRating, fldTitle, fldReview, fldPlanet FROM tblReviews';
-                $statement = $pdo->prepare($sql);
-                $statement->execute();
-                $rows = $statement->fetchAll();
-                
-                foreach ($rows as $row){
-                    print '';
-                    print '<p class=\'review_rating\'>' . $row['fldRating'] . '</p>';
-                    print '<p class=\'review_name\'>' . $row['fldName'] . '</p>';
-                    print '<p class=\'review_title\'>' . $row['fldTitle'] . '</p>';
-                    print '<p class=\'review_review\'>' . $row['fldReview'] . '</p>';
-                }
-                ?>
-            </article>
+            </section>
             <section class="reviewForm">
                 <h2>Write A Review</h2>
-                <form action="<?php print $phpself; ?>"
+                <form action="<?php print $phpThisPage; ?>"
                       id = "frmReview"
                       method="POST">
                     <fieldset>
@@ -207,12 +180,13 @@ function verifyAlphaNum($testString) {
                             <option value='planet4'>planet4</option>
                             <option value='planet5'>planet5</option>
                         </select>
-                    </fieldset>  
+                    </fieldset>
                     <input name="btnSubmit" type="submit" value="submit">
                 </form>
             </section>
+
         </main>
+
         <?php include "footer.php" ?>
-    </body>
-</html>
-    
+        </body>
+        </html>
