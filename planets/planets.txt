@@ -1,4 +1,0 @@
-planet1
-planet2
-planet3
-planet4
