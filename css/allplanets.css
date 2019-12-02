@@ -1,0 +1,57 @@
+main {
+    display: grid;
+    grid-template-rows: 20% 80%;
+}
+img {
+    max-width: 50%
+}
+section.planetGrid {
+    display: grid;
+    grid-template-rows: repeat(3, auto);
+    grid-template-columns: repeat(3, auto);
+}
+
+section.planetGrid figure.planet1 {
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
+}
+
+section.planetGrid figure.planet2 {
+    grid-row: 1 / 2;
+    grid-column: 2 / 3;
+}
+
+section.planetGrid figure.planet3 {
+    grid-row: 1 / 2;
+    grid-column: 3 / 4;
+}
+
+section.planetGrid figure.planet4 {
+    grid-row: 2 / 3;
+    grid-column: 1 / 2;
+}
+
+section.planetGrid figure.planet5 {
+    grid-row: 2 / 3;
+    grid-column: 2 / 3;
+}
+
+section.planetGrid figure.planet6 {
+    grid-row: 2 / 3;
+    grid-column: 3 / 4;
+}
+
+section.planetGrid figure.planet7 {
+    grid-row: 3 / 4;
+    grid-column: 1 / 2;
+}
+
+section.planetGrid figure.planet8 {
+    grid-row: 3 / 4;
+    grid-column: 2 / 3;
+}
+
+section.planetGrid figure.planet9 {
+    grid-row: 3 / 4;
+    grid-column: 3 / 4;
+}
