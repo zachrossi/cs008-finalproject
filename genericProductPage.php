@@ -22,8 +22,6 @@ function verifyAlphaNum($testString) {
 }
 ?>
 <main>
-    <h1>PlanetBay</h1>
-    <article>
         <?php
         // process form when it is submitted
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -116,7 +114,7 @@ function verifyAlphaNum($testString) {
             <h2 class = "purchaseButton"><a href="paymentinfo.php">Purchase Planet</a></h2>
 
             <figure class = "planetImages">
-                <img src="finalProjectImages/genericplanet.jpg" alt="This should show the main planet image">
+                <img src="planets/planet1.png" alt="This should show the main planet image">
                 <!-- Under the main image will be all the images in a row, smaller than the main image -->
             </figure>
 
@@ -139,50 +137,52 @@ function verifyAlphaNum($testString) {
                     <li>Feature</li>
                 </ul>
             </article>
-            <section class="displayReview">
-                <h3>Reviews</h3>
-            </section>
-            <section class="reviewForm">
-                <h2>Write A Review</h2>
-                <form action="<?php print $phpThisPage; ?>"
-                      id = "frmReview"
-                      method="POST">
-                    <fieldset>
-                        <legend>Enter your Name and Email</legend>
-                        <p><label for="txtName">Name:</label>
-                            <input name="txtName" id="txtName" type="text" required></p>
-                        <p><label for="txtEmail">Email:</label>
-                            <input name="txtEmail" id="txtEmail" type="text" required></p>
-                    </fieldset>
-                    <fieldset>
-                        <legend>Enter your review</legend>
-                        <p><label for="txtReviewHeadline">Review Title:</label>
-                            <input name="txtReviewHeadline" id="txtReviewHeadline" type="text" required></p>
-                        <p><label for="txtReview">Review:</label>
-                            <textarea name="txtReview" id="txtReview" rows="7" cols="50"></textarea></p>
-                    </fieldset>
-                    <fieldset>
-                        <legend>Select your rating</legend>
-                        <select name="selRating" id="selRating" required>
-                            <option value='1'>1</option>
-                            <option value='2'>2</option>
-                            <option value='3'>3</option>
-                            <option value='4'>4</option>
-                            <option value='5'>5</option>
-                        </select>
-                    </fieldset>
-                    <fieldset>
-                        <legend>Select the planet the review is for</legend>
-                        <select name="selPlanet" id="selPlanet" required>
-                            <option value='planet1'>planet1</option>
-                            <option value='planet2'>planet2</option>
-                            <option value='planet3'>planet3</option>
-                            <option value='planet4'>planet4</option>
-                            <option value='planet5'>planet5</option>
-                        </select>
-                    </fieldset>
-                    <input name="btnSubmit" type="submit" value="submit">
-                </form>
+            <section class="reviews">
+                <section class="reviewForm">
+                    <h2>Write A Review</h2>
+                    <form action="<?php print $phpThisPage; ?>"
+                          id = "frmReview"
+                          method="POST">
+                        <fieldset>
+                            <legend>Enter your Name and Email</legend>
+                            <p><label for="txtName">Name:</label>
+                                <input name="txtName" id="txtName" type="text" required></p>
+                            <p><label for="txtEmail">Email:</label>
+                                <input name="txtEmail" id="txtEmail" type="text" required></p>
+                        </fieldset>
+                        <fieldset>
+                            <legend>Enter your review</legend>
+                            <p><label for="txtReviewHeadline">Review Title:</label>
+                                <input name="txtReviewHeadline" id="txtReviewHeadline" type="text" required></p>
+                            <p><label for="txtReview">Review:</label>
+                                <textarea name="txtReview" id="txtReview" rows="7" cols="50"></textarea></p>
+                        </fieldset>
+                        <fieldset>
+                            <legend>Select your rating</legend>
+                            <select name="selRating" id="selRating" required>
+                                <option value='1'>1</option>
+                                <option value='2'>2</option>
+                                <option value='3'>3</option>
+                                <option value='4'>4</option>
+                                <option value='5'>5</option>
+                            </select>
+                        </fieldset>
+                        <fieldset>
+                            <legend>Select the planet the review is for</legend>
+                            <select name="selPlanet" id="selPlanet" required>
+                                <option value='planet1'>planet1</option>
+                                <option value='planet2'>planet2</option>
+                                <option value='planet3'>planet3</option>
+                                <option value='planet4'>planet4</option>
+                                <option value='planet5'>planet5</option>
+                            </select>
+                        </fieldset>
+                        <input name="btnSubmit" type="submit" value="Submit Review">
+                    </form>
+                </section>
+                <section class="displayReviews">
+                    <h2>All Reviews</h2>
+                </section>
             </section>
 
         </main>
