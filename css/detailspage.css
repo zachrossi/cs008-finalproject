@@ -1,6 +1,4 @@
 body {
-    max-width: 80em;
-    padding: 2em;
     display: grid;
     grid-template-rows: 20% 60% 20%;
 }
