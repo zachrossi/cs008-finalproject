@@ -5,6 +5,10 @@
     --h1-fontsize: t;
     --h2-fontsize: t;
 }
+body {
+    max-width: 80em;
+    padding: 2em;
+}
 
 nav > ul > li {
     display: inline-block;
