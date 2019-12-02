@@ -36,7 +36,7 @@ main h2.price {
     grid-column: 2 / 3;
     grid-row: 3 / 4;
 }
-main  article {
+main article {
     grid-column: 2 / 3;
     grid-row: 4 / 6;
 }
@@ -44,7 +44,7 @@ main h2.purchaseButton {
     grid-column: 3 / 4;
     grid-row: 1 / 2;
 }
-main section.reviewForm {
+main section.reviews {
     grid-column: 1 / 4;
     grid-row: 6 / 7;
 }
