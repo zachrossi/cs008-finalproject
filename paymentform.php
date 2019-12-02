@@ -1,9 +1,79 @@
 <?php
     include "top.php";
     include "nav.php";
+$dataIsGood = false;
+
+function getData($field) {
+    if(!isset($_POST[$field])) {
+        $data = "";
+    } else {
+        $data = trim($_POST[$field]);
+        $data = htmlspecialchars($data);
+    }
+    return $data;
+}
+?>
     ?>
 <main>
+    <?php
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        $dataIsGood = true;
+
+        $firstName = getData("txtFirstName");
+        $lastName = getData("txtLastName");
+        $email = getData("txtEmail");
+        $email = filter_var($email, FILTER_SANITIZE_EMAIL);
+        $phoneNumber = getData("txtPhoneNumber");
+        $mailAddress = getData("txtMailAddress");
+        $city = getData("txtCity");
+        $state = getData("txtState");
+        $zipCode = getData("txtZipCode");
+        $planet = getData("selPlanetPayment");
+        $cardType = getData("cardType");
+        $cardName = getData("txtCardName");
+        $cardNumber = getData("txtCardNumber");
+        $cardCVC = getData("txtCardCVC");
+        $expirationMonth = getData("selExpirationMonth");
+        $expirationYear = getData("selExpirationYear");
+        $emailCheckbox = getData("chkEmail");
+        $textCheckbox = getData("chkText");
+        $phoneCheckbox = getData("chkPhone");
+
+        /*if($email == "") {
+            print "<p class='mistake'>Please enter your email address.</p>";
+            $dataIsGood = false; }
+        elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+            print "<p class='mistake'>The email address you entered is invalid.</p>";
+            $dataIsGood = false;*/
+
+        //MORE VALIDATION IF STATEMENTS GO HERE//
+
+
+        //CONNECTION TO DATABASE:
+            if($dataIsGood){
+                try{
+                    $sql="INSERT INTO tblPayment (txtFirstName, txtLastName, txtEmail, txtPhoneNumber, txtMailAddress, txtCity, txtState, txtZipCode, selPlanet, fldCardType, txtCardName, txtCardNumber, txtCardCVC, fldExpirationMonth, fldExpirationYear, chkEmail, chkText, chkPhone) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+                    $statement = $pdo->prepare($sql);
+                    $params = [$firstName, $lastName, $email, $phoneNumber, $mailAddress, $city, $state, $zipCode,
+                        $planet, $cardType, $cardName, $cardNumber, $cardCVC, $expirationMonth, $expirationYear,
+                        $emailCheckbox, $textCheckbox, $phoneCheckbox];
+                    $statement->execute($params);
+
+                    print"<p>Data has been successfully inserted.</p>";
+                }
+                catch (PDOException $e) {
+                    print "<p>Data was unable to be submitted.</p>";
+                }
+            }
+             print "<p>Your contact and donation info was received. Thank you for your contribution!</p>";
+
+            die();
+        }
+    ?>
     <h2>Enter the following information to complete your purchase.</h2>
+    <form action="<?php print $phpSelf; ?>"
+          id = "frmDonate"
+          method="POST">
     <fieldset class="personalInfo">
         <legend>Enter your personal information:</legend>
         <p><label for="txtFirstName">First name:</label>
@@ -88,6 +158,15 @@
                 </select>
             </p>
         </fieldset>
+    </fieldset>
+    <fieldset class="updates">
+        <legend>Select how you would like to recieve updates (optional).</legend>
+        <p><input type="checkbox" id="chkEmail" name="chkEmail">
+            <label for="chkEmail">Email</label></p>
+        <p><input type="checkbox" id="chkText" name="chkText">
+            <label for="chkText">Text</label></p>
+        <p><input type="checkbox" id="chkPhone" name="chkPhone">
+            <label for="chkPhone">Phone</label></p>
     </fieldset>
     <input name="btnSubmitPurchase" type="submit" value="Complete Purchase">
 
