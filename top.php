@@ -53,7 +53,7 @@ $pdo = new PDO($dsn, $dbUserName, $dbPassword);
     <meta charset="UTF-8">
     <meta name="author" content="Zachary Rossi, Tyler Eisenmenger, Josh Deland">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/custom.css?version=1.0" type="text/css">
+    <link rel="stylesheet" href="css/main.css?version=1.0" type="text/css">
 </head>
 <?php
 print '<body id="' . $path_parts['filename'] . '">';
