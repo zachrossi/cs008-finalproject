@@ -1,4 +1,7 @@
-    <nav>
+<header>
+    <h1>Planet Bay</h1>
+</header>
+<nav>
         <ul>
             <?php
             //Home Page
