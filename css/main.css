@@ -6,19 +6,19 @@
     --h2-fontsize: t;
 }
 
-.navBar > ul > li {
+nav > ul > li {
     display: inline-block;
     list-style-type: none;
     width: 13em
 }
-.navBar > ul > li > a {
+nav > ul > li > a {
     text-decoration: none;
     font-size: 28px;
     color:  blue;
     position:relative;
 }
 
-.navBar > ul > li >a::after {
+nav > ul > li >a::after {
     content: "";
     position: absolute;
     left: 0 ;
@@ -31,6 +31,6 @@
     transition: transform 200ms ease-in-out;
 }
 
-.navBar > ul > li >a:hover::after{
+nav > ul > li >a:hover::after{
     transform: scaleX(1);
 }
