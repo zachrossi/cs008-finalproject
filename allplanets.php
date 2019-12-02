@@ -9,47 +9,47 @@ include "nav.php";
 
     <section class="planetGrid">
         <figure class="planet1">
-            <img src="planets/planet1.png">
+            <img src="images/planets/planet4.jpg">
             <figcaption>Planet 1</figcaption>
         </figure>
 
         <figure class="planet2">
-            <img src="planets/planet1.png">
+            <img src="images/planets/planet2.jpg">
             <figcaption>Planet 2</figcaption>
         </figure>
 
         <figure class="planet3">
-            <img src="planets/planet1.png">
+            <img src="images/planets/planet1.png">
             <figcaption>Planet 3</figcaption>
         </figure>
 
         <figure class="planet4">
-            <img src="planets/planet1.png">
+            <img src="images/planets/planet3.jpg">
             <figcaption>Planet 4</figcaption>
         </figure>
 
         <figure class="planet5">
-            <img src="planets/planet1.png">
+            <img src="images/planets/planet1.png">
             <figcaption>Planet 5</figcaption>
         </figure>
 
         <figure class="planet6">
-            <img src="planets/planet1.png">
+            <img src="images/planets/planet4.jpg">
             <figcaption>Planet 6</figcaption>
         </figure>
 
         <figure class="planet7">
-            <img src="planets/planet1.png">
+            <img src="images/planets/planet2.jpg">
             <figcaption>Planet 7</figcaption>
         </figure>
 
         <figure class="planet8">
-            <img src="planets/planet1.png">
+            <img src="images/planets/planet4.jpg">
             <figcaption>Planet 8</figcaption>
         </figure>
 
         <figure class="planet9">
-            <img src="planets/planet1.png">
+            <img src="images/planets/planet3.jpg">
             <figcaption>Planet 9</figcaption>
         </figure>
     </section>
