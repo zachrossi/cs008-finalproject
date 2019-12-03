@@ -24,11 +24,11 @@
 
             //Products
             print '<li class="';
-            if ($path_parts['filename'] == "products") {
+            if ($path_parts['filename'] == "allplanets") {
                 print 'activePage';
             }
             print '">';
-            print '<a href="products.php">Shop Planets</a>';
+            print '<a href="allplanets.php">Shop Planets</a>';
             print '</li>';
             
             //Contest
