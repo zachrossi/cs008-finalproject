@@ -3,9 +3,11 @@ CS008 Final Project
 
 # To Do
 -Add Content for the 9 planets
--ill do some(Zach) - i will also do some (Josh)
-  -hobbiton (done)
-  -jeffbezos (done)
+-ill do some(Zach)
+  [-hobbiton (done)
+  -jeffbezos (done)]
+-i will also do some (Josh)
+ 
 
 -Home page 
 
