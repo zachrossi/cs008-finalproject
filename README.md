@@ -13,8 +13,6 @@ CS008 Final Project
 -Add content to About page - Description of our history/ what we do,   Google maps location, photo of founding members (us)
   (BEING WORK ON BY JOSH)
   
--Validation on purchase page
-
 -Update footer
 
 -Make wireframe
