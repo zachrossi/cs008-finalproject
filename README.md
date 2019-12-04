@@ -3,13 +3,13 @@ CS008 Final Project
 
 # To Do
 -Add Content for the 9 planets
--ill do some(Zach)
+-ill do some(Zach) - i will also do some (Josh)
 
 -Home page 
 
--CSS
+-CSS (I can also do some - Josh)
 
--Replace Contest page with something else
+-Replace Contest page with something else (I can start this - Josh)
 
 -Add content to About page - Description of our history/ what we do,   Google maps location, photo of founding members (us)
   (BEING WORK ON BY JOSH)
