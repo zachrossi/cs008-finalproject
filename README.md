@@ -16,3 +16,7 @@ CS008 Final Project
 -Validation on purchase page
 
 -Update footer
+
+-Make wireframe
+
+-Put sql code on a page - sql.php - link to it on sitemap
