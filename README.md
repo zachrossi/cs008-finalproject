@@ -3,6 +3,7 @@ CS008 Final Project
 
 # To Do
 -Add Content for the 9 planets
+-ill do some(Zach)
 
 -Home page 
 
@@ -14,7 +15,9 @@ CS008 Final Project
   (BEING WORK ON BY JOSH)
   
 -Update footer
+-ill do this(Zach)
 
 -Make wireframe
 
 -Put sql code on a page - sql.php - link to it on sitemap
+-ill do this(Zach)
