@@ -15,3 +15,4 @@ CS008 Final Project
   
 -Validation on purchase page
 
+-Update footer
