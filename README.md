@@ -18,6 +18,7 @@ CS008 Final Project
 -ill do this(Zach)
 
 -Make wireframe
+-ill do this(Zach)
 
 -Put sql code on a page - sql.php - link to it on sitemap
 -ill do this(Zach)
