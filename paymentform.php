@@ -36,11 +36,89 @@ function getData($field) {
             $textCheckbox = getData("chkText");
             $phoneCheckbox = getData("chkPhone");
 
+            if($firstName == "") {
+                print "<p class='mistake'>Please enter your first name.</p>";
+                $dataIsGood = false; }
+
+            if($lastName == "") {
+                print "<p class='mistake'>Please enter your last name.</p>";
+                $dataIsGood = false; }
+
             if($email == "") {
                 print "<p class='mistake'>Please enter your email address.</p>";
                 $dataIsGood = false; }
             elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
                 print "<p class='mistake'>The email address you entered is invalid.</p>";
+                $dataIsGood = false; }
+
+            if($firstName == "") {
+                print "<p class='mistake'>Please enter your name.</p>";
+                $dataIsGood = false; }
+
+            if($phoneNumber == "") {
+                print "<p class='mistake'>Please enter your phone number.</p>";
+                $dataIsGood = false; }
+            elseif(!preg_match('/^\d{10}$/', $phoneNumber)) {
+                print "<p class='mistake'>The phone number you entered is invalid.</p>";
+                $dataIsGood = false; }
+
+            if($mailAddress == "") {
+                print "<p class='mistake'>Please enter your mailing address.</p>";
+                $dataIsGood = false; }
+
+            if($city == "") {
+                print "<p class='mistake'>Please enter the city of your mailing address.</p>";
+                $dataIsGood = false; }
+
+            if($state == "") {
+                print "<p class='mistake'>Please enter the state of your mailing address.</p>";
+                $dataIsGood = false; }
+
+            if($zipCode == "") {
+                print "<p class='mistake'>Please enter your zip code.</p>";
+                $dataIsGood = false; }
+            elseif(!ctype_digit($zipCode)) {
+                print "<p class='mistake'>The zip code you entered is invalid.</p>";
+                $dataIsGood = false; }
+            elseif(!preg_match('/^\d{5}$/', $zipCode)) {
+                print "<p class='mistake'>The zip code you entered is invalid.</p>";
+                $dataIsGood = false; }
+
+            if($planet == "") {
+                print "<p class='mistake'>Please select the planet you want to purchase.</p>";
+                $dataIsGood = false; }
+
+            if($cardType == "") {
+                print "<p class='mistake'>Please select a payment card type.</p>";
+                $dataIsGood = false; }
+
+            if($cardName == "") {
+                print "<p class='mistake'>Please enter the name that appears on your card.</p>";
+                $dataIsGood = false; }
+
+            if($cardNumber == "") {
+                print "<p class='mistake'>Please enter your card number.</p>";
+                $dataIsGood = false; }
+            elseif(!preg_match('/^\d{16}$/', $cardNumber)) {
+                print "<p class='mistake'>The card number you entered is invalid. It should be 16 digits long.</p>";
+                $dataIsGood = false; }
+
+            if($cardCVC == "") {
+                print "<p class='mistake'>Please enter your card CVC number.</p>";
+                $dataIsGood = false; }
+            elseif(!preg_match('/^\d{4}$/' or '/^\d{3}$/', $cardNumber)) {
+                print "<p class='mistake'>The CVC you entered is invalid. It should be 3 or 4 digits long.</p>";
+                $dataIsGood = false; }
+
+            if($expirationMonth == "") {
+                print "<p class='mistake'>Please select the month your card expires.</p>";
+                $dataIsGood = false; }
+
+            if($expirationYear == "") {
+                print "<p class='mistake'>Please select the year your card expires.</p>";
+                $dataIsGood = false; }
+            elseif($expirationYear < 2019 or $expirationYear > 2032) {
+                print "<p class='mistake'>Select the year your card expires. It must be between 2019 and 2032.</p>";
                 $dataIsGood = false; }
 
             //MORE VALIDATION IF STATEMENTS GO HERE//
