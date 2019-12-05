@@ -20,7 +20,7 @@ CS008 Final Project
 -Update footer(done)
 -ill do this(Zach)
 
--Make wireframe
+-Make wireframe(done)
 -ill do this(Zach)
 
 -Put sql code on a page - sql.php - link to it on sitemap(done)
