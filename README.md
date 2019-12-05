@@ -15,9 +15,6 @@ CS008 Final Project
 
 -Replace Contest page with something else (I can start this - Josh)
 
--Add content to About page - Description of our history/ what we do,   Google maps location, photo of founding members (us)
-  (BEING WORK ON BY JOSH)
-  
 -Update footer(done)
 -ill do this(Zach)
 
