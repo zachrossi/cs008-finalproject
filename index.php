@@ -17,29 +17,29 @@ include ("nav.php");
         <!--Figure 1-->
         <section class="section_one">
             <figure>
-                <img src="images/planets/planet1.png" alt="Image of planet 1">
-                <figcaption>Planet 1</figcaption>
+                <img src="images/planets/hobbiton.png" alt="Image of Hobbiton">
+                <figcaption>Hobbiton</figcaption>
             </figure>
         </section>
         <!--Figure 2-->
         <section class="section_two">
             <figure>
-                <img src="images/planets/planet2.jpg" alt="Image of planet 2">
-                <figcaption>Planet 2</figcaption>
+                <img src="images/planets/jeffbezos.png" alt="Image of Jeffbezos">
+                <figcaption>Jeffbezos</figcaption>
             </figure>
         </section>
         <!--Figure 3-->
         <section class="section_three">
             <figure>
-                <img src="images/planets/planet3.jpg" alt="Image of planet 3">
-                <figcaption>planet 3</figcaption>
+                <img src="images/planets/odysseus.png" alt="Image of Odysseus">
+                <figcaption>Odysseus</figcaption>
             </figure>
         </section>
         <!--Figure 4-->
         <section class="section_four">
             <figure>
-                <img src="images/planets/planet4.jpg" alt="Image of planet 4">
-                <figcaption>planet 4</figcaption>
+                <img src="images/planets/winturn.png" alt="Image of Winturn">
+                <figcaption>Winturn</figcaption>
             </figure>
         </section>
     </article>
