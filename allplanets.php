@@ -9,8 +9,8 @@ include "nav.php";
 
         <section class="planetGrid">
             <figure class="planet1">
-                <img src="images/planets/planet1.png">
-                <figcaption><a href="fakeplanet1.php">Fake Planet 1</a></figcaption>
+                <img src="images/planets/hobbiton.png">
+                <figcaption><a href="hobbiton.php">Hobbiton</a></figcaption>
             </figure>
 
             <figure class="planet2">
@@ -19,8 +19,8 @@ include "nav.php";
             </figure>
 
             <figure class="planet3">
-                <img src="images/planets/planet2.jpg">
-                <figcaption><a href="fakeplanet2.php">Fake Planet 2</a></figcaption>
+                <img src="images/planets/jeffbezos.png">
+                <figcaption><a href="jeffbezos.php">Jeffbezos</a></figcaption>
             </figure>
 
             <figure class="planet4">
@@ -29,8 +29,8 @@ include "nav.php";
             </figure>
 
             <figure class="planet5">
-                <img src="images/planets/planet3.jpg">
-                <figcaption><a href="fakeplanet3.php">Fake Planet 3</a></figcaption>
+                <img src="images/planets/odysseus.png">
+                <figcaption><a href="odysseus.php">Odysseus</a></figcaption>
             </figure>
 
             <figure class="planet6">
@@ -39,8 +39,8 @@ include "nav.php";
             </figure>
 
             <figure class="planet7">
-                <img src="images/planets/planet4.jpg">
-                <figcaption><a href="fakeplanet4.php">Fake Planet 4</a></figcaption>
+                <img src="images/planets/winturn.jpg">
+                <figcaption><a href="winturn.php">Winturn</a></figcaption>
             </figure>
 
             <figure class="planet8">
