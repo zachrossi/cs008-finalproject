@@ -109,7 +109,7 @@ function verifyAlphaNum($testString) {
     <h2 class = "purchaseButton"><a href="paymentform.php">Purchase Planet</a></h2>
 
     <figure class = "planetImages">
-        <img src="images/planets/winturn.jpg" alt="This should show the main planet image">
+        <img src="images/planets/winturn.png" alt="This should show the main planet image">
         <!-- Under the main image will be all the images in a row, smaller than the main image -->
     </figure>
 
