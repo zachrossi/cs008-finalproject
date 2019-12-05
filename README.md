@@ -6,7 +6,8 @@ CS008 Final Project
 -ill do some(Zach)
   [-hobbiton (done)
   -jeffbezos (done)
-  -odysseus (done)]
+  -odysseus (done)
+  -winturn]
 -i will also do some (Josh)
  
 
