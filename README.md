@@ -5,7 +5,8 @@ CS008 Final Project
 -Add Content for the 9 planets
 -ill do some(Zach)
   [-hobbiton (done)
-  -jeffbezos (done)]
+  -jeffbezos (done)
+  -odysseus (done)]
 -i will also do some (Josh)
  
 
