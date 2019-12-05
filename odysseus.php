@@ -173,7 +173,7 @@ function verifyAlphaNum($testString) {
                         <option value='saturn'>Saturn</option>
                         <option value='odysseus'>Odysseus</option>
                         <option value='pluto'>Pluto</option>
-                        <option value='fakeplanet4'>Fake Planet 4</option>
+                        <option value='winturn'>Winturn</option>
                         <option value='venus'>Venus</option>
                         <option value='fakeplanet5'>Fake Planet 5</option>
                     </select>
