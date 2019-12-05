@@ -39,7 +39,7 @@ include "nav.php";
             </figure>
 
             <figure class="planet7">
-                <img src="images/planets/winturn.jpg">
+                <img src="images/planets/winturn.png">
                 <figcaption><a href="winturn.php">Winturn</a></figcaption>
             </figure>
 
