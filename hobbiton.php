@@ -169,11 +169,11 @@ function verifyAlphaNum($testString) {
                     <select name="selPlanet" id="selPlanet" required>
                         <option value='hobbiton'>Hobbiton</option>
                         <option value='jupiter'>Jupiter</option>
-                        <option value='fakeplanet2'>Fake Planet 2</option>
+                        <option value='jeffbezos'>Jeffbezos</option>
                         <option value='saturn'>Saturn</option>
-                        <option value='fakeplanet3'>Fake Planet 3</option>
+                        <option value='odysseus'>Odysseus</option>
                         <option value='pluto'>Pluto</option>
-                        <option value='fakeplanet4'>Fake Planet 4</option>
+                        <option value='winturn'>Winturn</option>
                         <option value='venus'>Venus</option>
                         <option value='fakeplanet5'>Fake Planet 5</option>
                     </select>
