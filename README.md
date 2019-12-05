@@ -7,7 +7,7 @@ CS008 Final Project
   [-hobbiton (done)
   -jeffbezos (done)
   -odysseus (done)
-  -winturn]
+  -winturn (done)]
 -i will also do some (Josh)
  
 
