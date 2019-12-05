@@ -7,4 +7,7 @@ footer
     <a href="products.php">Shop Planets</a>
     <a href="contest.php">Contest</a>
     <a href="about.php">About</a>
+    <p>Tyler Eisenmenger CS008A</p>
+    <p>Zachary Rossi CS008A</p>
+    <p>Josh Deland CS008C</p>
 </footer>
