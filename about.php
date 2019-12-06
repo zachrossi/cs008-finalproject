@@ -38,15 +38,15 @@ include ("nav.php");
 
     <section class="founders">
         <h2>Founding Members</h2>
-        <figure>
+        <figure class="josh">
             <img src="images/misc/josh.jpg" alt="Joshua Deland">
             <figcaption>Joshua Deland</figcaption>
         </figure>
-        <figure>
+        <figure class="zach">
             <img src="images/misc/zach.jpg" alt="Zachary Rossi">
             <figcaption>Zachary Rossi</figcaption>
         </figure>
-        <figure>
+        <figure class="tyler">
             <img src="images/misc/tyler.png" alt="Tyler Eisenmenger">
             <figcaption>Tyler Eisenmenger</figcaption>
         </figure>
