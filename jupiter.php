@@ -122,7 +122,7 @@ function verifyAlphaNum($testString) {
             Jupiter offers at least 79 moons! Buy before this legendary planet is gone.
         </p>
 
-        <h3>Features of Firey Planet</h3>
+        <h3>Features of Jupiter</h3>
         <ul class = "featureList">
             <li>The Great Red Spot - a massive storm</li>
             <li>Named after the Roman god of the sky and of thunder</li>
