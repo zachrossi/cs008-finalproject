@@ -1,0 +1,18 @@
+main section.founders {
+    display: grid;
+    grid-template-columns: repeat(3,auto);
+}
+
+main figure.josh {
+    grid-column: 1 / 2;
+}
+main figure.zach {
+    grid-column: 2 / 3;
+}
+main figure.tyler {
+    grid-column: 3 / 4;
+}
+
+figure {
+    text-align: center;
+}
