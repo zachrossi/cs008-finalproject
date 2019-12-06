@@ -130,7 +130,7 @@ function verifyAlphaNum($testString) {
             <li>At least 82 moons and hundrds of moonlets </li>
             <li>1,100 mph winds</li>
             <li>Composed of ~96% hydrogen</li>
-            <li>Pieces of the rings range from 1 nanometer to 10 meters in diameter/li>
+            <li>Pieces of the rings range from 1 nanometer to 10 meters in diameter</li>
             <li>Has a nice yellowish-brown color</li>
         </ul>
     </article>
