@@ -12,6 +12,7 @@ include ("top.php");
 include ("nav.php");
 ?>
 <main>
+    <h1>Welcome to PlanetBay, home of the largest selection of planets for sale.</h1>
     <!-- The HTML and JAVA Script for the slide show was found at -->
     <!-- https://www.w3schools.com/howto/howto_js_slideshow.asp -->
     <article class="slideshow-container">
