@@ -1,8 +1,9 @@
 :root{
-    --background: rgba(212, 202, 219, .75);
-    --text-color: rgb(255, 255, 255);
-    --h1-fontsize: t;
-    --h2-fontsize: t;
+    --background-color: rgba(212, 202, 219, .75);
+    --main-content-font: 'Roboto Condensed', sans-serif;
+    --text-fontsize: 14pt;
+    --text-color: white;
+    --secondary-content-font: Futura,Trebuchet MS,Arial,sans-serif;
 }
 
 main{
@@ -16,6 +17,8 @@ body {
     /* https://www.flickr.com/photos/jochenspieker/36726853776/in/photolist-XXqJ5Q-eBMnaL-BVkgKj-eABARe-92BQMn-22qafbw-MD2xsU-TikZhE-kTJmdi-98K3kT-Tiv49t-29LDycF-9a3ryD-fKod5s-bEDEPo-28u2npU-Zf91DJ-22EDktM-Gjc4Ck-YVrTVb-Y2ofwv-QXDTWk-Lk2Mz6-2ch489s-XCD2Eo-S1DKA4-S49cQ6-SXAryn-21fQoeM-NLGdaM-H8SZbw-22xszih-nUu6M2-R6hyTH-2cKYW6t-dLpSW3-2eqERXx-YE9z3o-SDqawZ-29pQCga-PYneTH-9kk4cq-DQAcgD-23ShZgz-dJoUuQ-bM5QCT-bw2Cd5-2e5Lz9F-RHf8Z8-Gjc6dz */
     /* Background image source */
     background-image: url("../images/background.jpg");
+    display: grid;
+    grid-template-rows: 15% 15% 60% 10%;
 }
 
 nav{
@@ -59,6 +62,47 @@ nav > ul > li >a:hover::after{
     right: auto;
     width: 100%;
 }
+h1,h2,h3,p,li,a,address,figcaption,legend {
+    color: var(--text-color);
+}
+p {
+    font-family: var(--main-content-font);
+    font-size: var(--text-fontsize)
+}
+
+h1 {
+    font-family: var(--secondary-content-font);
+    font-size: 28pt;
+}
+
+h2 {
+    font-family: var(--secondary-content-font);
+    font-size: 20pt;
+}
+
+h3 {
+    font-family: var(--secondary-content-font);
+    font-size: 18pt;
+}
+
+nav a {
+    font-family: var(--secondary-content-font)
+}
+
+figcaption {
+    font-family: var(--main-content-font);
+    font-size: var(--text-fontsize);
+}
+
+address {
+    font-family: var(--main-content-font);
+    font-size: var(--text-fontsize);
+}
+
+li {
+    font-family: var(--main-content-font);
+    font-size: var(--text-fontsize)
+
 
 footer{
     background: var(--background-color);
