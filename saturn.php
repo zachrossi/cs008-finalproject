@@ -191,8 +191,8 @@ function verifyAlphaNum($testString) {
             $rows = $statement->fetchAll();
             foreach ($rows as $row){
                 print '';
-                print '<p class=\'review_rating\'>' . $row['fldRating'] . '</p>';
-                print '<p class=\'review_name\'>' . $row['fldName'] . '</p>';
+                print '<p class=\'review_name\'>' . $row['fldName'] . '&nbsp&nbsp&nbsp Rating: ' . $row['fldRating'] .
+                    '/5</p>';
                 print '<p class=\'review_title\'>' . $row['fldTitle'] . '</p>';
                 print '<p class=\'review_review\'>' . $row['fldReview'] . '</p>';
             }
