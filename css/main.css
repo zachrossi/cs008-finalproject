@@ -8,6 +8,8 @@
 body {
     max-width: 80em;
     padding: 2em;
+    /* https://www.flickr.com/photos/jochenspieker/36726853776/in/photolist-XXqJ5Q-eBMnaL-BVkgKj-eABARe-92BQMn-22qafbw-MD2xsU-TikZhE-kTJmdi-98K3kT-Tiv49t-29LDycF-9a3ryD-fKod5s-bEDEPo-28u2npU-Zf91DJ-22EDktM-Gjc4Ck-YVrTVb-Y2ofwv-QXDTWk-Lk2Mz6-2ch489s-XCD2Eo-S1DKA4-S49cQ6-SXAryn-21fQoeM-NLGdaM-H8SZbw-22xszih-nUu6M2-R6hyTH-2cKYW6t-dLpSW3-2eqERXx-YE9z3o-SDqawZ-29pQCga-PYneTH-9kk4cq-DQAcgD-23ShZgz-dJoUuQ-bM5QCT-bw2Cd5-2e5Lz9F-RHf8Z8-Gjc6dz */
+    /* Background image source */
     background-image: url("../images/background.jpg");
 }
 
@@ -98,7 +100,8 @@ footer > ul > li >a:hover::after{
 .logo{
     float:left;
 }
-
+/* The css for slide show was origonally gotten from W3 Schools */
+/* https://www.w3schools.com/howto/howto_js_slideshow.asp */
 /* Slideshow container */
 .slideshow-container {
   max-width: 35em;
