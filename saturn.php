@@ -104,7 +104,7 @@ function verifyAlphaNum($testString) {
 
     <h1 class = "planetName">Saturn</h1>
 
-    <h2 class = "price">$22,990,300,000,000</h2>
+    <h2 class = "price">$1,352,029,578,300,000</h2>
 
     <h2 class = "purchaseButton"><a href="paymentform.php">Purchase Planet</a></h2>
 
@@ -114,21 +114,24 @@ function verifyAlphaNum($testString) {
     </figure>
 
     <article>
-        <p class = "description">(Example description)
-            Jupiter exudes an overwhelming feeling of life and vibrance. One of its most unique features
-            is the diversity of color as seen from space. Hues of yellow, purple, blue, and green pierce through
-            the atmosphere and into our blessed eyes. On the surface you will find deep valleys and tall peaks which
-            are complimented by a large lagoon in the eastern hemisphere and an expansive desert in the west. Underground
-            is a big cave with more caves in the first cave! Please buy this planet the price is very, very low!</p>
+        <p class = "description">
+            There are few planets quite as unique and admired as Saturn.
+            While the price is steep, we think it's worth it for beauty
+            and for the massive rings of the planet. Saturn is named after
+            the father of Jupiter because of how similar the two planets are.
+            Strangely enough, Saturn is 95 times more massive than the Earth, but
+            is only an eight as dense. With a core of metal and rock, and more than
+            100 moons and moonlets, you will find resources abundant. Add in the lovely
+            view of the rings every day and this deal is unbeatable.
+        </p>
 
-        <h3>Features of Firey Planet</h3>
+        <h3>Features of Saturn</h3>
         <ul class = "featureList">
-            <li>3.5 million sq. ft. of desert with fine sand</li>
-            <li>Main lagoon contains 12,895 million gallons of saltwater </li>
-            <li>Tallest peak - 45.3 km above sea level</li>
-            <li>Feature</li>
-            <li>Feature</li>
-            <li>Feature</li>
+            <li>At least 82 moons and hundrds of moonlets </li>
+            <li>1,100 mph winds</li>
+            <li>Composed of ~96% hydrogen</li>
+            <li>Pieces of the rings range from 1 nanometer to 10 meters in diameter/li>
+            <li>Has a nice yellowish-brown color</li>
         </ul>
     </article>
     <section class="reviews">
@@ -164,15 +167,15 @@ function verifyAlphaNum($testString) {
                 <fieldset>
                     <legend>Select the planet the review is for</legend>
                     <select name="selPlanet" id="selPlanet" required>
-                        <option value='fakeplanet1'>Fake Planet 1</option>
+                        <option value='hobbiton'>Hobbiton</option>
                         <option value='jupiter'>Jupiter</option>
-                        <option value='fakeplanet2'>Fake Planet 2</option>
+                        <option value='jeffbezos'>Jeffbezos</option>
                         <option value='saturn'>Saturn</option>
-                        <option value='fakeplanet3'>Fake Planet 3</option>
+                        <option value='odysseus'>Odysseus</option>
                         <option value='pluto'>Pluto</option>
-                        <option value='fakeplanet4'>Fake Planet 4</option>
+                        <option value='winturn'>Winturn</option>
                         <option value='venus'>Venus</option>
-                        <option value='fakeplanet5'>Fake Planet 5</option>
+                        <option value='nova'>Nova</option>
                     </select>
                 </fieldset>
                 <input name="btnSubmit" type="submit" value="Submit Review">
