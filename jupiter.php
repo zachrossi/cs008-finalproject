@@ -1,12 +1,9 @@
 <?php
 include "top.php";
 include "nav.php";
-print '<p>Post Array:</p><pre>';
-print_r($_POST);
-print '</pre>';
 $dataIsGood = false;
 //
-// Sanatize the data
+// Sanitize the data
 //
 function getData($field) {
     if (!isset($_POST[$field])) {
@@ -104,7 +101,7 @@ function verifyAlphaNum($testString) {
 
     <h1 class = "planetName">Jupiter</h1>
 
-    <h2 class = "price">$56,300,298,000,000</h2>
+    <h2 class = "price">$56,332,298,000,000</h2>
 
     <h2 class = "purchaseButton"><a href="paymentform.php">Purchase Planet</a></h2>
 
@@ -114,21 +111,24 @@ function verifyAlphaNum($testString) {
     </figure>
 
     <article>
-        <p class = "description">(Example description)
-            Jupiter exudes an overwhelming feeling of life and vibrance. One of its most unique features
-            is the diversity of color as seen from space. Hues of yellow, purple, blue, and green pierce through
-            the atmosphere and into our blessed eyes. On the surface you will find deep valleys and tall peaks which
-            are complimented by a large lagoon in the eastern hemisphere and an expansive desert in the west. Underground
-            is a big cave with more caves in the first cave! Please buy this planet the price is very, very low!</p>
+        <p class = "description">
+            Jupiter. Many know it as the "Gas Giant", and that is not without good reason.
+            The largest planet in the solar system, and one of the brightest objects in the sky,
+            observed by all of humanity since ancient times, not many planets have the same
+            notoriety as Jupiter. If you're the type of person who is prepared to face
+            the extreme. With wild storms and a obscure gaseous surface, Jupiter is one
+            tough planet. However, if you are up for the challenge, you will be able to
+            take advantage of Jupiter's vast gaseous resources and dense core. On top of that,
+            Jupiter offers at least 79 moons! Buy before this legendary planet is gone.
+        </p>
 
         <h3>Features of Firey Planet</h3>
         <ul class = "featureList">
-            <li>3.5 million sq. ft. of desert with fine sand</li>
-            <li>Main lagoon contains 12,895 million gallons of saltwater </li>
-            <li>Tallest peak - 45.3 km above sea level</li>
-            <li>Feature</li>
-            <li>Feature</li>
-            <li>Feature</li>
+            <li>The Great Red Spot - a massive storm</li>
+            <li>Named after the Roman god of the sky and of thunder</li>
+            <li>~89% Hydrogen</li>
+            <li>Surface area equivalency: 121.9 Earths</li>
+            <li>79 known moons, one is largest than Mercury</li>
         </ul>
     </article>
     <section class="reviews">
@@ -164,15 +164,15 @@ function verifyAlphaNum($testString) {
                 <fieldset>
                     <legend>Select the planet the review is for</legend>
                     <select name="selPlanet" id="selPlanet" required>
-                        <option value='fakeplanet1'>Fake Planet 1</option>
+                        <option value='hobbiton'>Hobbiton</option>
                         <option value='jupiter'>Jupiter</option>
-                        <option value='fakeplanet2'>Fake Planet 2</option>
+                        <option value='jeffbezos'>Jeffbezos</option>
                         <option value='saturn'>Saturn</option>
-                        <option value='fakeplanet3'>Fake Planet 3</option>
+                        <option value='odysseus'>Odysseus</option>
                         <option value='pluto'>Pluto</option>
-                        <option value='fakeplanet4'>Fake Planet 4</option>
+                        <option value='winturn'>Winturn</option>
                         <option value='venus'>Venus</option>
-                        <option value='fakeplanet5'>Fake Planet 5</option>
+                        <option value='nava'>Nova</option>
                     </select>
                 </fieldset>
                 <input name="btnSubmit" type="submit" value="Submit Review">
