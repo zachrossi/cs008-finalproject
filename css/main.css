@@ -1,10 +1,15 @@
 :root{
     --background: rgba(212, 202, 219, 75);
-    --text-fontsize: t;
     --text-color: rgb(255, 255, 255);
     --h1-fontsize: t;
     --h2-fontsize: t;
 }
+
+main{
+    color: var(--text-color);
+    
+}
+
 body {
     max-width: 80em;
     padding: 2em;
@@ -62,13 +67,12 @@ footer{
 
 footer > ul > li {
     display: inline-block;
-    text-align: right;
     list-style-type: none;
-    padding: 2em 2em
+    padding:11em 2em 1em 2em
 }
 footer > ul > li > a {
     text-decoration: none;
-    font-size: 2em;
+    font-size: 1.5em;
     color:  white;
     position:relative;
 }
