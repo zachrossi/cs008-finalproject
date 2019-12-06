@@ -1,5 +1,5 @@
 :root{
-    --background: rgba(212, 202, 219, 75);
+    --background: rgba(212, 202, 219, .75);
     --text-color: rgb(255, 255, 255);
     --h1-fontsize: t;
     --h2-fontsize: t;
