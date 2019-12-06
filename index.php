@@ -12,31 +12,28 @@ include ("top.php");
 include ("nav.php");
 ?>
 <main>
-    
+    <!-- The HTML and JAVA Script for the slide show was found at -->
+    <!-- https://www.w3schools.com/howto/howto_js_slideshow.asp -->
     <article class="slideshow-container">
 
         <!-- Full-width images with number and caption text -->
         <section class="mySlides fade">
-            <section class="numbertext">1 / 4</section>
             <img src="images/planets/hobbiton.png" alt="Image of Hobbiton" style="width:100%">
             <section class="text">Hobbiton</section>
         </section>
 
         <section class="mySlides fade">
-            <section class="numbertext">2 / 4</section>
-            <img src="images/planets/jeffbezos.png" alt="Image of Jeffbezos" style="width:100%">
+             <img src="images/planets/jeffbezos.png" alt="Image of Jeffbezos" style="width:100%">
             <section class="text">Jeffbezos</section>
         </section>
 
         <section class="mySlides fade">
-            <section class="numbertext">3 / 4</section>
-             <img src="images/planets/odysseus.png" alt="Image of Odysseus" style="width:100%">
+              <img src="images/planets/odysseus.png" alt="Image of Odysseus" style="width:100%">
             <section class="text">Odysseus</section>
         </section>
         
         <section class="mySlides fade">
-            <section class="numbertext">4 / 4</section>
-            <img src="images/planets/winturn.png" alt="Image of Winturn" style="width:100%">
+             <img src="images/planets/winturn.png" alt="Image of Winturn" style="width:100%">
             <section class="text">Winturn</section>
         </section>
 
