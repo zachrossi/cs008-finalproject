@@ -8,6 +8,7 @@ add
 include ("top.php");
 include ("nav.php");
 ?>
+<link rel="stylesheet" href="css/about.css?version=1.0" type="text/css">
 <main>
     <article>
         <h1>The History of PlanetBay</h1>
