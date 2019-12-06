@@ -1,6 +1,5 @@
 body {
     display: grid;
-    grid-template-rows: 20% 60% 20%;
 }
 main {
     display: grid;
@@ -35,10 +34,14 @@ main article {
 main h2.purchaseButton {
     grid-column: 3 / 4;
     grid-row: 1 / 2;
+    background:rgba(212, 202, 219, .50);
+    padding: 1em
 }
 main section.reviews {
     grid-column: 1 / 4;
     grid-row: 6 / 7;
+    background:rgba(212, 202, 219, .50);
+    padding: 1em
 }
 
 main h2.purchaseButton {
