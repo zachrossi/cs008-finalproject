@@ -289,3 +289,16 @@ body#paymentform main{
     padding: 1em;
     border-radius: 1em;
 }
+
+body#paymentform main fieldset {
+    padding: 1em;
+    margin: 1em;
+}
+
+body#paymentform main fieldset p {
+    padding: .5em
+}
+
+body#paymentform label img{
+    max-width: 10em;
+}
