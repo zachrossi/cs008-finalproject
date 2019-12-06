@@ -1,12 +1,9 @@
 <?php
 include "top.php";
 include "nav.php";
-print '<p>Post Array:</p><pre>';
-print_r($_POST);
-print '</pre>';
 $dataIsGood = false;
 //
-// Sanatize the data
+// Sanitize the data
 //
 function getData($field) {
     if (!isset($_POST[$field])) {
@@ -104,7 +101,7 @@ function verifyAlphaNum($testString) {
 
     <h1 class = "planetName">Venus</h1>
 
-    <h2 class = "price">$34,990,300,000,000</h2>
+    <h2 class = "price">$29,832,291,000</h2>
 
     <h2 class = "purchaseButton"><a href="paymentform.php">Purchase Planet</a></h2>
 
@@ -114,21 +111,24 @@ function verifyAlphaNum($testString) {
     </figure>
 
     <article>
-        <p class = "description">(Example description)
-            Jupiter exudes an overwhelming feeling of life and vibrance. One of its most unique features
-            is the diversity of color as seen from space. Hues of yellow, purple, blue, and green pierce through
-            the atmosphere and into our blessed eyes. On the surface you will find deep valleys and tall peaks which
-            are complimented by a large lagoon in the eastern hemisphere and an expansive desert in the west. Underground
-            is a big cave with more caves in the first cave! Please buy this planet the price is very, very low!</p>
+        <p class = "description">
+            Sometimes Venus is called the "sister planet" of Earth due to having a similar
+            mass, size, and nearness to the sun. However, one look at Venus and you
+            would never believe that it was called that. On the dry, rocky surface of Venus,
+            you can enjoy the average temperature of 864 degrees Fahrenheit. Named after
+            the Roman goddess of love, you will certainly fall in love with the vast and
+            beautiful desert landscape of Venus, as well as the frequent occurances of
+            volcanic activity. The largest selling point of Venus is the proximity to Earth, so
+            you can easily visit your Earthing friends and family.
+        </p>
 
-        <h3>Features of Firey Planet</h3>
+        <h3>Features of Venus</h3>
         <ul class = "featureList">
-            <li>3.5 million sq. ft. of desert with fine sand</li>
-            <li>Main lagoon contains 12,895 million gallons of saltwater </li>
-            <li>Tallest peak - 45.3 km above sea level</li>
-            <li>Feature</li>
-            <li>Feature</li>
-            <li>Feature</li>
+            <li>Sulfuric acid clouds</li>
+            <li>Numerous volcanoes</li>
+            <li>Similar core to Earth</li>
+            <li>Massive craters up to 280km in diameter</li>
+            <li>Extreme heat and proximity to the Sun</li>
         </ul>
     </article>
     <section class="reviews">
@@ -164,15 +164,15 @@ function verifyAlphaNum($testString) {
                 <fieldset>
                     <legend>Select the planet the review is for</legend>
                     <select name="selPlanet" id="selPlanet" required>
-                        <option value='fakeplanet1'>Fake Planet 1</option>
+                        <option value='hobbiton'>Hobbiton</option>
                         <option value='jupiter'>Jupiter</option>
-                        <option value='fakeplanet2'>Fake Planet 2</option>
+                        <option value='jeffbezos'>Jeffbezos</option>
                         <option value='saturn'>Saturn</option>
-                        <option value='fakeplanet3'>Fake Planet 3</option>
+                        <option value='odysseus'>Odysseus</option>
                         <option value='pluto'>Pluto</option>
-                        <option value='fakeplanet4'>Fake Planet 4</option>
+                        <option value='winturn'>Winturn</option>
                         <option value='venus'>Venus</option>
-                        <option value='fakeplanet5'>Fake Planet 5</option>
+                        <option value='nova'>Nova</option>
                     </select>
                 </fieldset>
                 <input name="btnSubmit" type="submit" value="Submit Review">
