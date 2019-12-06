@@ -1,9 +1,6 @@
 <?php
 include "top.php";
 include "nav.php";
-print '<p>Post Array:</p><pre>';
-print_r($_POST);
-print '</pre>';
 $dataIsGood = false;
 //
 // Sanatize the data
