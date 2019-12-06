@@ -10,18 +10,20 @@ main figure.planetImages {
     grid-column: 1 / 2;
     grid-row: 1 / 6;
     max-width: 100%;
-}    
+}
 main figure.planetImages img {
     max-width: 100%;
 }
 main h1.planetName {
     grid-column: 2 / 3;
     grid-row: 1 / 2;
+    font-size: 40pt;
 }
 main section.ratings h3{
     grid-column: 2 / 3;
     grid-row: 2 / 3;
     display: inline;
+    font-size: 14pt;
 }
 main h2.price {
     grid-column: 2 / 3;
@@ -35,16 +37,27 @@ main h2.purchaseButton {
     grid-column: 3 / 4;
     grid-row: 1 / 2;
     background:rgba(212, 202, 219, .50);
-    padding: 1em
+    padding: 1em;
+    border-radius: 1em;
+    text-decoration: none;
+}
+main h2.purchaseButton a {
+    text-decoration: none;
+}
+main h2.purchaseButton:hover  {
+    transition: background-color 1s ease-in;
+    background:rgb(212, 202, 219);
 }
 main section.reviews {
     grid-column: 1 / 4;
     grid-row: 6 / 7;
     background:rgba(212, 202, 219, .50);
-    padding: 1em
+    padding: 1em;
+    border-radius: 1em;
 }
 
 main h2.purchaseButton {
     grid-column: 3 / 4;
     grid-row: 1 / 2;
 }
+
