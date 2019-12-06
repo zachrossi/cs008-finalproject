@@ -109,26 +109,33 @@ function verifyAlphaNum($testString) {
     <h2 class = "purchaseButton"><a href="paymentform.php">Purchase Planet</a></h2>
 
     <figure class = "planetImages">
-        <img src="images/planets/pluto.png" alt="This should show the main planet image">
+        <img src="images/planets/pluto.png" alt="Image of Pluto">
         <!-- Under the main image will be all the images in a row, smaller than the main image -->
     </figure>
 
     <article>
-        <p class = "description">(Example description)
-            Jupiter exudes an overwhelming feeling of life and vibrance. One of its most unique features
-            is the diversity of color as seen from space. Hues of yellow, purple, blue, and green pierce through
-            the atmosphere and into our blessed eyes. On the surface you will find deep valleys and tall peaks which
-            are complimented by a large lagoon in the eastern hemisphere and an expansive desert in the west. Underground
-            is a big cave with more caves in the first cave! Please buy this planet the price is very, very low!</p>
+        <p class = "description">
+            We know what you may be thinking: "Pluto isn't a planet!". And yes, that is correct, but
+            despite the overwhelming controversy surrounding poor Pluto, we believe the little guy
+            deserves a place in your heart. In the late 19th century, many astronomers strongly
+            suspected that there was a ninth planet behind Neptune, and they deemed the mystery planet
+            "Planet X". Not too long after, Pluto was officially discovered and named after the
+            Roman mythological god of the underworld. Because of the dwarf planet's relatively small
+            surface area, Pluto is perfect for a customer that wants a more manageable property.
+            Pluto is a sight to behold, with its contrasting colors of pure snow white
+            and deep maroon red. Pluto also offers plenty of ice water to suite your
+            various needs, and if you dig a few miles, you will be greeted with a vast
+            subsurface ocean, great for swimming and for submarine adventures. Due to
+            unpopular demand, you can get Pluto and its five moons today for only $1!
+        </p>
 
-        <h3>Features of Firey Planet</h3>
+        <h3>Features of Pluto</h3>
         <ul class = "featureList">
-            <li>3.5 million sq. ft. of desert with fine sand</li>
-            <li>Main lagoon contains 12,895 million gallons of saltwater </li>
-            <li>Tallest peak - 45.3 km above sea level</li>
-            <li>Feature</li>
-            <li>Feature</li>
-            <li>Feature</li>
+            <li>Five moons: Charon, Nix, Hydra, Styx, and Kerberos </li>
+            <li>Vast plains of nitrogen ice</li>
+            <li>Surface area roughly the size of Russia</li>
+            <li>"Sputnik Planitia", a 1,000 km-wide basin of ice</li>
+            <li>Very little atmospheric pressure</li>
         </ul>
     </article>
     <section class="reviews">
@@ -164,15 +171,15 @@ function verifyAlphaNum($testString) {
                 <fieldset>
                     <legend>Select the planet the review is for</legend>
                     <select name="selPlanet" id="selPlanet" required>
-                        <option value='fakeplanet1'>Fake Planet 1</option>
+                        <option value='hobbiton'>Hobbiton</option>
                         <option value='jupiter'>Jupiter</option>
-                        <option value='fakeplanet2'>Fake Planet 2</option>
+                        <option value='jeffbezos'>Jeffbezos</option>
                         <option value='saturn'>Saturn</option>
-                        <option value='fakeplanet3'>Fake Planet 3</option>
+                        <option value='odysseus'>Odysseus</option>
                         <option value='pluto'>Pluto</option>
-                        <option value='fakeplanet4'>Fake Planet 4</option>
+                        <option value='winturn'>Winturn</option>
                         <option value='venus'>Venus</option>
-                        <option value='fakeplanet5'>Fake Planet 5</option>
+                        <option value='nava'>Nova</option>
                     </select>
                 </fieldset>
                 <input name="btnSubmit" type="submit" value="Submit Review">
