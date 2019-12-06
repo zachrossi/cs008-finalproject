@@ -175,7 +175,7 @@ function getData($field) {
                     <option value='pluto'>Pluto</option>
                     <option value='winturn'>Winturn</option>
                     <option value='venus'>Venus</option>
-                    <option value='fakeplanet5'>Fake Planet 5</option>
+                    <option value='nova'>Nova</option>
                 </select>
             </fieldset>
             <fieldset class="paymentInfo">
