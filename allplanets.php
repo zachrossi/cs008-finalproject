@@ -49,8 +49,8 @@ include "nav.php";
             </figure>
 
             <figure class="planet9">
-                <img src="images/planets/planet5.jpg">
-                <figcaption><a href="fakeplanet5.php">Fake Planet 5</a></figcaption>
+                <img src="images/planets/nova.png">
+                <figcaption><a href="nova.php">Nova</a></figcaption>
             </figure>
         </section>
     </main>
