@@ -1,6 +1,9 @@
 main {
     display: grid;
     grid-template-rows: 20% ;
+    max-width: 90%;
+    margin: auto;
+    padding: 2em;
 }
 img {
     max-width: 100%;
@@ -8,6 +11,9 @@ img {
 section.planetGrid {
     display: grid;
     grid-gap: 5em;
+    align-items: end;
+    text-align: center;
+    margin: auto;
 }
 
 section.planetGrid figure.planet1 {
@@ -49,6 +55,9 @@ section.planetGrid figure.planet8 {
     grid-row: 3 / 4;
     grid-column: 2 / 3;
 }
+section.planetGrid figcaption {
+    font-size: 10pt;
+}
 
 section.planetGrid figure.planet4 {
     grid-row: 3 / 4;
@@ -60,14 +69,15 @@ h1{
     margin:auto;
     font-size: 3em;
     text-align:center;
-    background:rgba(212, 202, 219, .75);
+    /*background:rgba(212, 202, 219, .75);*/
 }
 h2{
     display:inline-block;
     margin:auto;
     font-size: 1.5em;
     text-align:center;
-    background:rgba(212, 202, 219, .75);
+    padding-bottom: 3em;
+    /*background:rgba(212, 202, 219, .75);*/
 }
 
 .planetGrid > figure > figcaption > a{
@@ -75,3 +85,31 @@ h2{
     font-size: 2.5em
 }
 
+section.planetGrid {
+    font-size: 12pt;
+}
+figcaption a {
+    text-decoration: none;
+    color:  white;
+    position:relative;
+}
+
+figcaption a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width:100% ;
+    height: .09em ;
+    background: currentColor ;
+    transform: scaleX(0) ;
+    transform-origin: center;
+    transition: transform 200ms ease-in-out;
+}
+
+figcaption a:hover::after {
+    transform: scaleX(1);
+    left: 0;
+    right: auto;
+    width: 100%;
+}
