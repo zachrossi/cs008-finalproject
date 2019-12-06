@@ -1,5 +1,5 @@
-<header>
-    <h1>Planet Bay</h1>
+<header class='logo'>
+    <img src='images/logo_small.png'>
 </header>
 <nav>
         <ul>
