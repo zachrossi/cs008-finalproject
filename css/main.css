@@ -3,27 +3,29 @@
     --main-content-font: 'Roboto Condensed', sans-serif;
     --text-fontsize: 14pt;
     --text-color: white;
-    --secondary-content-font: Futura,Trebuchet MS,Arial,sans-serif;
+    --secondary-content-font: Futura,Trebuchet MS, Arial,sans-serif;
 }
 
 main{
     color: var(--text-color);
+    grid-column: 1 / 3;
 
 }
 
 body {
     max-width: 80em;
     padding: 2em;
+    margin: auto;
     /* https://www.flickr.com/photos/jochenspieker/36726853776/in/photolist-XXqJ5Q-eBMnaL-BVkgKj-eABARe-92BQMn-22qafbw-MD2xsU-TikZhE-kTJmdi-98K3kT-Tiv49t-29LDycF-9a3ryD-fKod5s-bEDEPo-28u2npU-Zf91DJ-22EDktM-Gjc4Ck-YVrTVb-Y2ofwv-QXDTWk-Lk2Mz6-2ch489s-XCD2Eo-S1DKA4-S49cQ6-SXAryn-21fQoeM-NLGdaM-H8SZbw-22xszih-nUu6M2-R6hyTH-2cKYW6t-dLpSW3-2eqERXx-YE9z3o-SDqawZ-29pQCga-PYneTH-9kk4cq-DQAcgD-23ShZgz-dJoUuQ-bM5QCT-bw2Cd5-2e5Lz9F-RHf8Z8-Gjc6dz */
     /* Background image source */
     background-image: url("../images/background.jpg");
     display: grid;
-    /*grid-template-rows: 15% 15% 60% 10%;*/
+    grid-template-rows: 15% 15% 60% 10%;
+    grid-template-columns: 40% 60%;
 }
 
-nav{
-    float:right;
-    /*background: var(--background-color);*/
+nav {
+    margin: auto;
 }
 
 nav > ul > li {
@@ -50,7 +52,7 @@ nav > ul > li >a::after {
     bottom: 0;
     width:100% ;
     height: .09em ;
-    /*background: currentColor ;*/
+    background: chartreuse ;
     transform: scaleX(0) ;
     transform-origin: center;
     transition: transform 200ms ease-in-out;
@@ -103,10 +105,20 @@ li {
     font-family: var(--main-content-font);
     font-size: var(--text-fontsize)
 }
+section.text {
+    font-family: var(--secondary-content-font);
+    font-size: 20pt;
+}
+legend {
+    font-family: var(--main-content-font);
+    font-size: var(--text-fontsize)
+}
 
 footer{
-   /* background: var(--background-color); */
+    /* background: var(--background-color); */
     text-align: center;
+    padding: 11em 0 0 0 ;
+    grid-column: 1 / 3;
 }
 
 footer > ul > li {
@@ -147,7 +159,7 @@ footer > ul > li >a:hover::after{
 }
 
 .logo{
-    float:left;
+
 }
 /* The css for slide show was origonally gotten from W3 Schools */
 /* https://www.w3schools.com/howto/howto_js_slideshow.asp */
@@ -171,24 +183,25 @@ footer > ul > li >a:hover::after{
     cursor: pointer;
     margin:auto;
     padding:0em 3.7em;
-    margin-top: -22px;
+    margin-top: -1em;
     color: white;
     font-weight: bold;
     font-size: 35px;
     transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
+    border-radius: .5em;
     user-select: none;
 }
 
 /* Position the "next button" to the right */
 .next {
     right: 0;
-    border-radius: 3px 0 0 3px;
+    border-radius: .5em;
 }
 
 /* On hover, add a black background color with a little bit see-through */
 .prev:hover, .next:hover {
     background-color: rgba(0,0,0,0.8);
+    background-size: 2em;
 }
 
 /* Caption text */
@@ -231,4 +244,48 @@ footer > ul > li >a:hover::after{
 @keyframes fade {
     from {opacity: .4}
     to {opacity: 1}
+}
+
+input[type=text] {
+    border-radius: .5em;
+    margin: 1em;
+    padding: .7em;
+    width: 20em;
+    font-size: 12pt;
+}
+
+textarea {
+    border-radius: .5em;
+    font-size: 12pt;
+    font-family: var(--main-content-font);
+}
+p label  {
+    text-align: center;
+}
+
+select {
+    border-radius: .5em;
+    margin: 1em;
+    padding: .4em;
+    font-size: 12pt;
+}
+
+input[type=submit]{
+    border-radius: .5em;
+    margin: 1em;
+    padding: 1em;
+    font-size: 14pt;
+    color: white;
+    background-color: mediumpurple;
+}
+
+input[type=submit]:hover  {
+    transition: background-color 1s ease-in;
+    background-color:rgb(212, 202, 219);
+}
+
+body#paymentform main{
+    background:rgba(212, 202, 219, .50);
+    padding: 1em;
+    border-radius: 1em;
 }
