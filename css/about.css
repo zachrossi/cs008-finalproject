@@ -16,3 +16,9 @@ main figure.tyler {
 figure {
     text-align: center;
 }
+
+@media all and (max-width: 1320px) {
+    section.founders img {
+        max-width: 100%;
+    }
+}
